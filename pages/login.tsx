@@ -62,22 +62,24 @@ function LoginPage() {
     };
 
     return (
-        <div className="flex min-h-screen flex-col items-center justify-center text-center bg-[#f5ab0b]">
-            <div className="absolute top-56 left-0 w-full h-1/4 bg-fuchsia-600 -skew-y-6 z-10 overflow-hidden shadow-xl" />
+        <div className="flex min-h-screen flex-col items-center justify-center text-center bg-[#368163]">
+            <div className="absolute top-56 left-0 w-full h-[20%] bg-[#2c2f47] -skew-y-12 z-10 overflow-hidden shadow-xl" />
+            <div className="absolute top-56 right-0 w-full h-[20%] bg-[#2d3047] skew-y-12 z-10 overflow-hidden shadow-xl" />
+
             <Image
-                className="mt-5 z-30 shadow-2xl mb-10 rounded-full"
-                src="https://links.papareact.com/xu7"
+                className="mt-12 z-30 mb-5 rounded-full"
+                src="https://gateway.pinata.cloud/ipfs/QmYGRVjikCMXi9d9H4tZytNMEFRFqBPsbzc2isQoRbfAAJ"
                 alt="logo"
-                width={400}
-                height={400}
+                width={370}
+                height={370}
             />
 
 
             <main className="z-30 text-white">
                 <h1 className="text-4xl font-bold uppercase">
-                    Welcome to the  
-                    <span className="text-fuchsia-600">
-                        Ocean 8
+                    Welcome to   <br />
+                    <span className="text-[#2d3045]">
+                        Planet Vance
                     </span>
                 </h1>
 
@@ -85,7 +87,7 @@ function LoginPage() {
                     <div>
                         <button
                             onClick={handleLogin}
-                            className="text-2xl font-bold mb-5 bg-fuchsia-600 text-white py-4 px-10 border-2 border-fusbg-fuchsia-600 animate-pulse rounded-md transition duration-200 mt-5"
+                            className="text-2xl font-bold mb-5 bg-[#C04ABC] text-white py-4 px-10 border-2 border-fusbg-fuchsia-600 animate-pulse rounded-md transition duration-200 mt-5"
                         >
                             Login / Connect Wallet
                         </button>
@@ -94,12 +96,12 @@ function LoginPage() {
 
                 {user && (
                     <div>
-                        <p className="text-lg text-fuchsia-600 font-bold mb-10">
+                        <p className="text-lg text-[#C04ABC] font-bold mb-10">
                             Welcome {user.address.slice(0, 5)}...{user.address.slice(-5)}
                         </p>
 
                         {isLoading && (
-                            <div className="text-2xl font-bold mb-5 bg-fuchsia-600 text-white py-4 px-10 border-2 border-fusbg-fuchsia-600 animate-pulse rounded-md transition duration-200">
+                            <div className="text-2xl font-bold mb-5 bg-[#C04ABC] text-white py-4 px-10 border-2 border-fusbg-fuchsia-600 animate-pulse rounded-md transition duration-200">
                                 Hold on, We're just looking for your Ocean 8 Membership pass...
                             </div>
                         )}
@@ -107,7 +109,7 @@ function LoginPage() {
                         {usersNft && (
                             <Link
                                 href="/"
-                                className="text-2xl font-bold mb-5 bg-fuchsia-600 text-white py-4 px-10 border-2 border-fusbg-fuchsia-600 animate-pulse rounded-md transition duration-200 hover:bg-white hover:text-fuchsia-600 mt-5 uppercase"
+                                className="text-2xl font-bold mb-5 bg-[#C04ABC] text-white py-4 px-10 border-2 border-fusbg-fuchsia-600 animate-pulse rounded-md transition duration-200 hover:bg-white hover:text-fuchsia-600 mt-5 uppercase"
                             >
                                 ACCESS GRANTED - ENTER
                             </Link>
@@ -116,7 +118,7 @@ function LoginPage() {
                         {!usersNft &&
                             !isLoading &&
                             (unclaimedSupply && unclaimedSupply > 0 ? (
-                                <button onClick={handlePurchase} className="bg-fuchsia-600 text-white py-4 px-10 border-2 border-fuchsia-600 rounded-md hover:bg-white hover:text-fuchsia-600 mt-5 uppercase font-bold transition duration-200">
+                                <button onClick={handlePurchase} className="bg-[#C04ABC] text-white py-4 px-10 border-2 border-[#C04ABC] rounded-md hover:bg-white hover:text-fuchsia-600 mt-5 uppercase font-bold transition duration-200">
                                     Buy an Ocean 8 Membership Pass
                                 </button>
                             ) : (
@@ -130,7 +132,7 @@ function LoginPage() {
                 {user && (
                     <button
                         onClick={logout}
-                        className="bg-white text-fuchsia-600 py-4 px-10 border-2 border-fuchsia-600 rounded-md hover:bg-fuchsia-600 hover:text-white mt-10 uppercase font-bold transition duration-200">
+                        className="bg-white text-fuchsia-600 py-4 px-10 border-2 border-[#C04ABC] rounded-md hover:bg-fuchsia-600 hover:text-white mt-10 uppercase font-bold transition duration-200">
                             logout
                         </button>
                 )}
