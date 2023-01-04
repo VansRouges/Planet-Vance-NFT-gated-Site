@@ -39,7 +39,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
 };
 
 const Home = () => {
-  const logout = useLogout();
+  // const logout = useLogout();
   return (
     <div className="flex min-h-screen flex-col items-center justify-center text-center bg-[#368163] -z-20 px-5">
       <p className="fixed top-5 text-xs md:text-base bg-red-500 rounded-full px-4 md:px-8 py-3 font-bold text-white mx-10">
@@ -94,7 +94,7 @@ const Home = () => {
 
 
       <button
-          onClick={logout}
+          // onClick={logout}
           className="text-2xl uppercase font-bold mb-5 bg-[#C04ABC] text-white py-4 px-10 border-2 border-fusbg-fuchsia-600 animate-pulse rounded-md transition duration-200 mt-5"
       >
           logout
