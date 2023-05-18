@@ -102,7 +102,7 @@ function LoginPage() {
 
                         {isLoading && (
                             <div className="text-2xl font-bold mb-5 bg-[#C04ABC] text-white py-4 px-10 border-2 border-fusbg-fuchsia-600 animate-pulse rounded-md transition duration-200">
-                                Hold on, We're just looking for your Ocean 8 Membership pass...
+                                Hold on, We're just looking for your Planet Membership pass...
                             </div>
                         )}
 
@@ -119,11 +119,11 @@ function LoginPage() {
                             !isLoading &&
                             (unclaimedSupply && unclaimedSupply > 0 ? (
                                 <button onClick={handlePurchase} className="bg-[#C04ABC] text-white py-4 px-10 border-2 border-[#C04ABC] rounded-md hover:bg-white hover:text-fuchsia-600 mt-5 uppercase font-bold transition duration-200">
-                                    Buy an Ocean 8 Membership Pass
+                                    Buy an Planet Membership Pass
                                 </button>
                             ) : (
                                 <p className="text-2xl font-bold mb-5 bg-red-500 text-white py-4 px-10 border-2 border-red-500 rounded-md uppercase transition duration-200">
-                                    Sorry, we're all out of Ocean 8 Mmebership passes! Better luck next time!
+                                    Sorry, we're all out of Planet Mmebership passes! Better luck next time!
                                 </p>
                             ))}
                     </div>
